@@ -1,0 +1,12 @@
+age
+#!/usr/bin/python
+
+
+name = raw_input("what is your name? ")
+birthdate = raw_input("what is your birthdate? " )
+
+age = input("how old are you? ")
+
+print("%s was born on %s" % (name, birthdate))
+print('Half of you age is %s' % (age /2 ))
+
