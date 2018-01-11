@@ -1,0 +1,104 @@
+---------- Forwarded message ----------
+From: "Jaiwatruk Bhatt" <jaiwatruk.bhatt@key.me>
+Date: Jan 11, 2018 12:52 PM
+Subject: code from today
+To: "Jay Bhatt" <jaybhatt216@gmail.com>
+Cc: 
+
+parser.contains
+
+#!/usr/bin/python
+
+import argparse
+
+parser = argparse.ArgumentParser( description='Search for words including partial word')
+parser.add_argument('snippet', help= 'partial (or complete) string to search for in the words file')
+
+
+args = parser.parse_args()
+snippet = args.snippet.lower()
+
+words = open('/usr/share/dict/words'). readlines()
+
+
+print([word.strip() for word in words if snippet in word.lower()])
+
+
+
+
+
+
+#matches = []
+
+
+#for word in words:
+    # if snippet in word.lower():
+        # matches.append(word)
+
+
+#print(matches) 
+~                    
+
+cmd
+#!/usr/bin/python
+
+import subprocess
+
+#code = subprocess.call(['ls', '-l'])
+try:
+    output = subprocess.check_output(
+            ['ls', 'fake.txt'],
+            stderr=subprocess.STDOUT
+            )
+except OSError as err:
+    print('caught OSERROR')
+    output = err
+except subprocess.calledProcessError as err:
+    print('caught process error')
+    output =err
+
+
+
+
+print(output)
+
+#if code == 0:
+   # print("command finished successfully")
+#else:
+  # print("failed with code: %i" % code)
+
+
+~      
+
+
+
+reverse file
+#!/usr/bin/python
+
+#import sys
+
+#print('First argument %s' % sys.argv[1])
+
+import argparse
+
+parser = argparse.ArgumentParser( description='Reads a file in reverse')
+
+parser.add_argument('filename' , help='the file to read')
+parser.add_argument('--limit', '-l', type=int, help='the number of lines to read')
+parser.add_argument('-- version', '-v', action='version', version='%(prog)s 1.0')
+#"%(prog)s 2.0" % {'prog' : 'reverse-file'}
+
+
+args = parser.parse_args()
+
+with open(args.filename) as f:
+    lines = f.readlines()
+    lines.reverse()
+    if args.limit:
+        lines = lines[:args.limt]
+    for line in lines:
+        print(line.strip()[::-1])
+
+
+print(args)
+~                                                                           
