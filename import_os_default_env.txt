@@ -1,0 +1,16 @@
+#!/bin/python
+import os
+stage = (os.getenv('STAGE') or 'development').upper()
+#stage = os.environ['STAGE'].upper()
+output = 'we are running in %s' % stage
+if state.startswith('PROD'):
+    output = 'DANGER!!! - ' + output
+print(output)
+~           
+
+[user@jaybhattkeyme1 ~]$ STAGE=staging default-env 
+we are running in STAGING
+[user@jaybhattkeyme1 ~]$ STAGE=production default-env 
+DANGER!!! - we are running in PRODUCTION
+[user@jaybhattkeyme1 ~]$  default-env 
+we are running in DEVELOPMENT
