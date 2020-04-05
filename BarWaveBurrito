@@ -3,6 +3,8 @@
 # query using Google Places API 
 #you will need the request and json modules
 #you can try to use the HTTP request modules if you want 
+#to run this progam please ensure your firewall allows access on required ports
+#you can run this in a python editor as long as you have the required packages installed.
 
 # importing required modules 
 import requests 
