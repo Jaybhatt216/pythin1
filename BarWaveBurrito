@@ -11,7 +11,7 @@ import requests
 import json 
   
 # enter your api key here 
-api_key = 'AIzaSyBzJN-QL6JHPQUg0iVn8xIgNxYGb8PW8Dc'
+api_key =
   
 # url variable store url 
 url = "https://maps.googleapis.com/maps/api/place/textsearch/json?"
