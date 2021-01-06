@@ -1,0 +1,10 @@
+'''
+Write a function that returns the sum of two numbers.
+'''
+
+def add(param1, param2):
+    if isinstance(param1, int) or isinstance(param1, bool) and isinstance(param2, int) or isinstance(param2, bool):
+        return param1 + param2
+    else:
+        return "ints or floats only"
+     
