@@ -1,0 +1,17 @@
+'''
+    Given an array of integers, find the pair of adjacent elements that has the largest product and return that product.
+
+'''
+
+def adjacentElementsProduct(inputArray):
+    arr = inputArray #shorthand instead of wrting input array I wrote arr 
+    x = 0 #this will be the array element 
+    y = 0 #this will be the next element after x 
+    p = float("-inf") # if x and y are greater than 0 assign their product to p 
+    for i in range(0,len(arr)-1): #loop through array starting at 0 going up to length of array and stoping at 1 less than last element 
+        x = arr[i] #first element 
+        y = arr[i+1] #element after X
+        if x * y > p: #if x and y are greater than 0 
+            p = x*y # assign p the product of x and y
+    return p #return p
+    
