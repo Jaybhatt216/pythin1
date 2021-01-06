@@ -1,0 +1,21 @@
+def makeArrayConsecutive2(statues):
+    #step 1 sort the array
+    statues.sort()
+    #variables for looping to second to last element and last element
+    x = 0
+    y = 1
+    #last item
+    last = len(statues)-1
+    #keep track of number of statues need to fill
+    diff = 0
+    #loop
+    while x <= last - 1 and y <= last:
+        #if for compare and add assign  
+        if statues[y] - statues[x] > 1:
+            diff += (statues[y] - statues[x] -1)
+        x += 1
+        y += 1
+    return diff
+            
+        
+    
